@@ -1,0 +1,27 @@
+#Personal Settings
+title: Infozy Infotainment Group
+description: Infozy is a Information Website that focuses Mainly on Chartered Accountant Topics but also on Many General Topics that will be useful.
+tagline: Little Bit of Everything
+email: infozy.news@gmail.com
+phone: +917358528452
+siteurl: https://infozy.tk
+
+
+#Social Settings
+twitter-url:
+facebook-url:
+instagram-url:
+dribble-url: https://dribbble.com/Sudhar2000
+gitHub-url: https://github.com/tks18
+500px-url: https://500px.com/tks18
+
+
+# build settings
+markdown: kramdown
+
+#configuration
+exclude : ["Gemfile", "phantom.gemspec", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+
+
+sass:
+  style: compressed

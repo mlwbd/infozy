@@ -1,0 +1,27 @@
+<html>
+  <head>
+  	<title>{{ page.title }}&nbsp;&#124;&nbsp;{{ site.title }}</title>
+    {% include _head.html %}
+  </head>                    
+    <body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+              {% include _header.html %}
+                
+                <!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>{{ page.title }} </h1>
+							{% if page.image %}
+							<span class="image main">
+								<img src="/assets/images/{{ page.image }}" alt="" />
+							</span>
+							{% endif %}
+							<p>{{ page.content }}</p>
+						</div>
+					</div>
+                {% include _footer.html %}
+			</div>
+        {% include _scripts.html %}
+    </body>
+</html>

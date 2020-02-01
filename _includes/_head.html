@@ -1,37 +1,91 @@
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}" />
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<noscript>
-			<link rel="stylesheet" href="{{ "/assets/css/noscript.css" | relative_url }}" />
-		</noscript>
-		<link rel='shortcut icon' type='image/x-icon' href='/assets/icon/favicon.ico' />
-	<meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<!-- Important Stuffs -->
+        <meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1 />
+	    <link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}" />
+	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <noscript>
+           <link rel="stylesheet" href="{{ "/assets/css/noscript.css" | relative_url }}" />
+        </noscript>
+    <!-- End -->
 
-    <!-- Social: Twitter -->
+    <!-- Pre-requisites -->
+        {% assign title = '' %}
+        {% if page.layout == 'page' %}
+            {% assign title = page.title | append: " | " | append: site.title %}
+        {% else %}
+            {% assign title = site.title | append: " | " | append: site.tagline %}
+        {% endif %}
+
+        {% assign image = '' %}
+        {% if page.image %}
+            {% assign image = page.image %}
+        {% else %}
+            {% assign image = "/assets/images/about.jpg" | prepend: site.baseurl | prepend: site.url %}
+        {% endif %}
+
+        {% assign description = '' %}
+        {% if page.description %}
+            {% assign description = page.description | strip_html | strip_newlines | truncate: 160 %}
+        {% else %}
+            {% assign description = site.description %}
+        {% endif %}
+    <!-- End -->
+
+	<!-- Website Favicons -->
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/images/icons/favicons/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/icons/favicons/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/icons/favicons/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/icons/favicons/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/assets/images/icons/favicons/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/images/icons/favicons/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/images/icons/favicons/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/images/icons/favicons/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="/assets/images/icons/favicons/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="/assets/images/icons/favicons/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="/assets/images/icons/favicons/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/assets/images/icons/favicons/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/assets/images/icons/favicons/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="Infozy Group"/>
+        <meta name="msapplication-TileColor" content="#111D5E" />
+        <meta name="msapplication-TileImage" content="/assets/images/icons/favicons/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="/assets/images/icons/favicons/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="/assets/images/icons/favicons/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="/assets/images/icons/favicons/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="/assets/images/icons/favicons/mstile-310x310.png" />
+    <!-- End -->
+
+    <!-- Metadata's -->
+        <title>{{ title }}</title>
+        <meta name="description" content="{{ description }}">
+        <meta name="msapplication-notification" content="frequency=30;polling-uri=https://notifications.buildmypinnedsite.com/?feed=https://feeds.infozy.tk/&amp;id=1;polling-uri2=https://notifications.buildmypinnedsite.com/?feed=https://feeds.infozy.tk/&amp;id=2;polling-uri3=https://notifications.buildmypinnedsite.com/?feed=https://feeds.infozy.tk/&amp;id=3;polling-uri4=https://notifications.buildmypinnedsite.com/?feed=https://feeds.infozy.tk/&amp;id=4;polling-uri5=https://notifications.buildmypinnedsite.com/?feed=https://feeds.infozy.tk/&amp;id=5;cycle=1" />
+    <!-- End -->
+
+    <!-- Social -->
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{site.twitter_username}}">
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.username }}{% else %}{{ site.title }}{% endif %}">
-    <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:title" content="{{title}}">
+    <meta name="twitter:description" content="{{description}}">
     {% if page.image %}
     <meta property="twitter:image:src" content="{{ page.image }}">
     {% else %}
     <meta property="twitter:image:src" content="{{ "/assets/images/about.jpg" | prepend: site.baseurl | prepend: site.siteurl }}">
     {% endif %}
 
-    <!-- Social: Facebook / Open Graph -->
+    <!-- Facebook / Open Graph -->
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.siteurl }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.username }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:title" content="{{title}}">
     {% if page.image %}
     <meta property="og:image" content="{{ page.image }}">
     {% else %}
     <meta property="og:image" content="{{ "/assets/images/about.jpg" | prepend: site.baseurl | prepend: site.siteurl }}">
     {% endif %}
-    <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:description" content="{{description}}">
     <meta property="og:site_name" content="{{ site.title }}">
 
     <!-- Social: Google+ / Schema.org  -->
-    <meta itemprop="name" content="{% if page.title %}{{ page.title }} | {{ site.username }}{% else %}{{ site.title }}{% endif %}"/>
-    <meta itemprop="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta itemprop="name" content="{{title}}"/>
+    <meta itemprop="description" content="{{description}}">
     <meta itemprop="image" content="{{ "/assets/images/about.jpg" | prepend: site.baseurl | prepend: site.siteurl }}"/>

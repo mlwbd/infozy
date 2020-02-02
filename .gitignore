@@ -10,3 +10,4 @@ _drafts
 /_config.yml
 personal-token.txt
 .npmrc
+.jekyll-cache

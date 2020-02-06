@@ -5,6 +5,7 @@ source "https://rubygems.org"
 gem "bundler"
 gem "jekyll", ">= 3.8.4"
 gem "rake", ">= 12.0"
+gem 'kickster', '~> 2.2'
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

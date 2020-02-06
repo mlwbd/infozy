@@ -5,19 +5,26 @@
 version: 2.1 
 
 
-orbs:
-  ruby: circleci/ruby@0.1.2 # Ruby orb registry: https://circleci.com/orbs/registry/orb/circleci/ruby
+machine:
+  environment:
+    USER_NAME: tks18
+    USER_EMAIL: tksudharshan@gmail.com
+  ruby:
+    version: 2.6.5
 
-jobs: 
-  build: 
-    docker: 
-      - image: circleci/ruby:2.6.3-stretch-node
-    steps: 
-      - checkout
-      - run: 
-          name: Which bundler?
-          command: bundle -v
-      - ruby/bundle-install
+dependencies:
+  pre:
+    - ./bin/setup
 
+test:
+  post:
+    - bundle exec jekyll build
+    - bundle exec htmlproof ./_site --only-4xx --href-ignore "#"
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - ./bin/automated
 # What to do next? Set up a test job. Please see 
 # https://circleci.com/docs/2.0/configuration-reference/, for more  info on how to get started.

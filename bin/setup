@@ -7,7 +7,7 @@
 set -e
 
 # Set up Ruby dependencies via Bundler.
-gem install bundler --conservative
+gem install bundler
 bundle check || bundle install
 bundle update
 

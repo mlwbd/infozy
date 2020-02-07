@@ -12,7 +12,7 @@ install:
 - bundle install
 
 script:
-  - JEKYLL_ENV=production bundle exec jekyll build --destination site
+  - JEKYLL_ENV=production bundle exec jekyll build
 
 deploy:
   provider: pages
@@ -24,4 +24,4 @@ deploy:
   github-token: $fc52de659dd22be7f6eb79debbf5453db4de1b39
   keep-history: true
   on:
-    branch: release
+    branch: master

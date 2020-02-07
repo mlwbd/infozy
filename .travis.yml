@@ -1,5 +1,8 @@
 language: ruby
 cache: bundler
+branches:
+  only:
+  - master
 before_install:
    - rvm install 2.6.5
 install:
@@ -7,8 +10,18 @@ install:
 - gem install jekyll -v 3.8.5
 - gem install bundler -v 2.1.4
 - bundle install
+
 script:
-- "./bin/deploy.sh"
-env:
-  global:
-    secure: fc52de659dd22be7f6eb79debbf5453db4de1b39
+  - JEKYLL_ENV=production bundle exec jekyll build --destination site
+
+deploy:
+  provider: pages
+  local-dir: ./site
+  target-branch: master
+  email: deploy@travis-ci.org
+  name: Deployment Bot
+  skip-cleanup: true
+  github-token: $fc52de659dd22be7f6eb79debbf5453db4de1b39
+  keep-history: true
+  on:
+    branch: release

@@ -10,7 +10,7 @@ jobs:
       - run: npm install
       - run: sudo gem update --system
       - run: sudo gem install bundler
-      - run: bundle install
+      - run: bundle install -v 2.1.4
       - run: bundle exec jekyll build
       - deploy:
           name: Deploy Release to GitHub

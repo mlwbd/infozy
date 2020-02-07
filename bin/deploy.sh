@@ -2,6 +2,7 @@
 
 set -e
 
+gem update --system '2.7.9'
 DEPLOY_REPO="https://$fc52de659dd22be7f6eb79debbf5453db4de1b39@github.com/tks18/infozy.git"
 
 function main {

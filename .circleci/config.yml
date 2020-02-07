@@ -37,21 +37,36 @@ jobs:
           paths:
             - _site
   deploy:
-    docker:
-      - image: node:8.10.0
-    steps:
-      - checkout
-      - attach_workspace:
-          at: docs/_build
-      - run:
-          name: Install and configure dependencies
-          command: |
-            npm install -g --silent gh-pages@2.0.1
-            git config tksudharshan@gmail.com "ci-build@klukas.net"
-            git config tks18 "ci-build"
-      - run:
-          name: Deploy docs to gh-pages branch
-          command: gh-pages --dist docs/_build/html
+        name: Deploy static pages to Github Pages
+        command: |
+          if [ "${CIRCLE_BRANCH}" = "master" ]; then
+            echo -e "Starting to deploy to Github Pages\n"
+            cd ~/repo
+            git config --global user.email "tksudharshan@gmail.com"
+            git config --global user.name "tks18"
+            #using token clone gh-pages branch
+            git clone --quiet --branch=$CIRCLE_BRANCH https://$f20fcabeb6b644cf10534da58a6c88f2876dbc8f@github.com/$TARGET_REPO built_website > /dev/null
+            # Installing rsync
+            echo "Installing rsync"
+            sudo apt-get -y install rsync
+            #go into directory and copy data we're interested in to that directory
+            cd built_website
+            echo "rsync built code with checked out code..."
+            rsync -r --exclude=.git --delete ../$PELICAN_OUTPUT_FOLDER/ ./
+            #add, commit and push files
+            echo "add files to git..."
+            git add -f .
+            echo "commit files to git repository..."
+            if git commit -m "CircleCI build $CIRCLE_BUILD_NUM pushed to Github Pages" ; then
+              echo "git push files with force..."
+              git push -fq origin $BRANCH > /dev/null
+              echo -e "Deploy completed\n"
+            else
+              echo "Content not changed, nothing to deploy"
+            fi
+          else
+            echo "Not master branch, dry run only"
+          fi
 workflows:
   version: 2
   test-deploy:

@@ -8,4 +8,6 @@
     docker_image_tag: "latest"
     execute_commands:
     - "chown jekyll:jekyll $WORKING_DIR"
+    - "chmod 0600 /buddy/infozy/Gemfile.lock"
+    - "gem install bundler -v 2.1.4"
     - "jekyll build"

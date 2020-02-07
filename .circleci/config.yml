@@ -9,9 +9,6 @@ jobs:
       - checkout
       - run: npm install
       - run: sudo gem update --system
-      - run: sudo gem uninstall bundler
-      - run: sudo rm /usr/local/bin/bundle
-      - run: sudo rm /usr/local/bin/bundler
       - run: sudo gem install bundler
       - run: bundle install -v 
       - run: bundle exec jekyll build

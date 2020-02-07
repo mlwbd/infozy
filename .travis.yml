@@ -1,6 +1,8 @@
 language: ruby
 cache: bundler
 install:
+- gem install jekyll -v 3.8.5
+- gem install bundler -v 2.1.4
 - bundle install
 script:
 - "./bin/deploy.sh"

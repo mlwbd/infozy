@@ -9,5 +9,6 @@
     execute_commands:
     - "chown jekyll:jekyll $WORKING_DIR"
     - "chmod 0600 /buddy/infozy/Gemfile.lock"
+    - "chmod -R +w ~/.rbenv"
     - "gem install bundler -v 2.1.4"
     - "jekyll build"

@@ -3,10 +3,17 @@ jobs:
   deploy:
     docker:
       - image: circleci/ruby:2.4.3-node-browsers
+        environment:
+          BUNDLER_VERSION: 2.1.4
     steps:
       - checkout
       - run: npm install
-      - run: bundle install
+      - run: sudo gem update --system
+      - run: sudo gem uninstall bundler
+      - run: sudo rm /usr/local/bin/bundle
+      - run: sudo rm /usr/local/bin/bundler
+      - run: sudo gem install bundler
+      - run: bundle install -v 
       - run: bundle exec jekyll build
       - deploy:
           name: Deploy Release to GitHub

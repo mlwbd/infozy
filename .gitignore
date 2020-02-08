@@ -1,10 +1,5 @@
-.idea
-.DS_Store
-.sass-cache
-package-json.lock
-_site
-node_modules
-_drafts
-personal-token.txt
-.npmrc
+_site/
+.sass-cache/
+.jekyll-metadata
 .jekyll-cache
+*.gem

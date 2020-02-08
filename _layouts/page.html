@@ -1,27 +1,17 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-  <head>
-  	<title>{{ page.title }}&nbsp;&#124;&nbsp;{{ site.title }}</title>
-    {% include _head.html %}
-  </head>                    
-    <body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
-              {% include _header.html %}
-                
-                <!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<h1>{{ page.title }} </h1>
-							{% if page.image %}
-							<span class="image main">
-								<img src="/assets/images/{{ page.image }}" alt="" />
-							</span>
-							{% endif %}
-							<p>{{ page.content }}</p>
-						</div>
-					</div>
-                {% include _footer.html %}
-			</div>
-        {% include _scripts.html %}
-    </body>
+
+{% include head.html %}
+
+<body>
+
+    {% include header.html %} {{ content }} {% include footer.html %}
+
+</body>
+
 </html>

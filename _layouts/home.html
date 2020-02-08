@@ -1,144 +1,83 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
-	Phantom by HTML5 UP
+	Forty by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-  <head>
-  	<title>{{ site.title }}</title>
-    {% include _head.html %}
-  </head>                    
-    <body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
-              {% include _header.html %}
-                    <!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<header>
-								<h1>{{ page.landing-title }}</h1>
-								<h2>{{ site.description }}</h2>
-								<center><p>{{ page.description }}</p></center>
-							</header>
-							<center>
-							  <div class="row">
-								  <div class="col-4 col-12-medium">
-									  <a href="/about.html" class="button primary">About Infozy</a>
-								  </div>
-								  <div class="col-4 col-12-medium">
-									  <a href="/allsites.html" class="button primary">Sites in Infozy</a>
-								  </div>
-								  <div class="col-4 col-12-medium">
-									  <a href="https://about.focuspocus.tk" class="button primary">Contact Me</a>
-								  </div>
-							  </div>
-							</center>
-							<section class="tiles">
-								<article class="style1">
-									<span class="image">
-										<img src="/assets/images/FIN.jpg" alt="" />
-									</span>
-									<a href="https://business.focuspocus.tk">
-										<h2>Business</h2>
-										<div class="content">
-											<p>Latest Business News and Updates, Click Here to Redirect to Business Webpage.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="/assets/images/PRO.jpg" alt="" />
-									</span>
-									<a href="https://profs.focuspocus.tk">
-										<h2>CA Professionals Hub</h2>
-										<div class="content">
-											<p>Expert Analysis on issues faced by CA's and Various News Helpful for Chartered Accountant.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="/assets/images/STU.jpg" alt="" />
-									</span>
-									<a href="https://students.focuspocus.tk">
-										<h2>CA Student Hub</h2>
-										<div class="content">
-											<p>Exam News, Updates and Articles to help Students on their Exams.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style4">
-									<span class="image">
-										<img src="/assets/images/GST.jpg" alt="" />
-									</span>
-									<a href="https://gst.focuspocus.tk">
-										<h2>GST News</h2>
-										<div class="content">
-											<p>Dedicated Webpage for Gst Updates, News, Real-Time Issues and FAQ's.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style5">
-									<span class="image">
-										<img src="/assets/images/IT.jpg" alt="" />
-									</span>
-									<a href="https://incometax.focuspocus.tk">
-										<h2>Income Tax News</h2>
-										<div class="content">
-											<p>Stay Up to Date with the Latest Updates, Notifications, FAQ's.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style6">
-									<span class="image">
-										<img src="/assets/images/TECH.jpg" alt="" />
-									</span>
-									<a href="https://tech.focuspocus.tk">
-										<h2>Tech Updates</h2>
-										<div class="content">
-											<p>Latest Tech News and Gadget Updates.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="/assets/images/GAD.jpg" alt="" />
-									</span>
-									<a href="https://gadgets.focuspocus.tk">
-										<h2>Gadget Reviews</h2>
-										<div class="content">
-											<p>Reviews Regarding Latest Gadgets Released in the Global Markets.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="/assets/images/PHO.jpg" alt="" />
-									</span>
-									<a href="https://snaps.focuspocus.tk">
-										<h2>Photographer's Hub</h2>
-										<div class="content">
-											<p>Collection of Photos of Great Scenaries and Visuals.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style1">
-									<span class="image">
-										<img src="/assets/images/CRE.jpg" alt="" />
-									</span>
-									<a href="https://creators.focuspocus.tk">
-										<h2>News from the Creators</h2>
-										<div class="content">
-											<p>News from the Creators like Youtube, Instagram, etc.</p>
-										</div>
-									</a>
-								</article>
-							</section>
-						</div>
-					</div>
-                {% include _footer.html %}
-			</div>
-        {% include _scripts.html %}
-    </body>
+
+{% include head.html %}
+
+<body>
+
+    {% include header.html %}
+
+    <!-- Banner -->
+    <section id="banner" class="major">
+        <div class="inner">
+            <header class="major">
+                <h1>{{ page.landing-title }}</h1>
+            </header>
+            <div class="content">
+                <p style="text-transform: uppercase;">{{ site.description }}</p>
+            </div>
+            <div class="row">
+                <div class="4u 12u$(medium)">
+                    <center>
+                        <ul class="actions">
+                            <li><a href="#one" class="button next scrolly">Start Now</a></li>
+                        </ul>
+                    </center>
+                </div>
+                <div class="4u 12u$(medium)">
+                    <center>
+                        <ul class="actions">
+                            <li><a href="#two" class="button next scrolly">Latest News</a></li>
+                        </ul>
+                    </center>
+                </div>
+                <div class="4u 12u$(medium)">
+                    <center>
+                        <ul class="actions">
+                            <li><a href="https://about.infozy.tk" class="button next scrolly">About Authors</a></li>
+                        </ul>
+                    </center>
+                </div>
+            </div>
+            <center>
+                <b>
+                    <p>
+                        &#129309; Click any of the Category below to Get Redirected to the Concerned Website or Click Latest News Button Above for Quick News. &#129309;
+                    </p>
+                </b>
+            </center>
+        </div>
+    </section>
+    <!-- Main -->
+    <div id="main">
+
+        <!-- One -->
+        {% include tiles.html %}
+
+        <!-- Two -->
+        <section id="two">
+            <div class="inner">
+                <header class="major">
+                    <h2>Latest Posts & News (Links Broken)</h2>
+                </header>
+                <p>{{ content }}</p>
+                <ol class="custom">
+                    {% for post in site.posts %}
+                    <li><a href="landing.html">{{ post.title }}</a></li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </section>
+
+    </div>
+
+    {% include footer.html %}
+
+</body>
+
 </html>

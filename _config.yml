@@ -1,27 +1,31 @@
-#Personal Settings
-title: Infozy Infotainment Group
-description: Infozy is a Information Website that focuses Mainly on Chartered Accountant Topics but also on Many General Topics that will be useful.
-tagline: Little Bit of Everything
-email: infozy.news@gmail.com
-phone: +917358528452
-siteurl: https://infozy.tk
+# site settings
+title: Infozy
+subtitle: Little Bit of Everything
+email: tksudharshan@infozy.tk
+description: Infozy offers Students a unique environment for gathering and sharing information that will help them do their jobs with efficiency. At the core, our goal is to capture the intimate conversation between peers and colleagues when they need quick advice from a trusted, experienced source.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://infozy.tk" # the base hostname & protocol for your site
+author:
+street_address: 15/27, Triplicane 
+city: Chennai
+state: TN
+zip_code: 600005
+country: India
 
-
-#Social Settings
-twitter-url:
-facebook-url:
-instagram-url:
-dribble-url: https://dribbble.com/Sudhar2000
-gitHub-url: https://github.com/tks18
-500px-url: https://500px.com/tks18
-
+# social settings
+500px_url:
+facebook_url:
+github_url:
+gitlab_url: https://gitlab.com/u/andrewbanchich
+googleplus_url: https://plus.google.com/u/0/+AndrewBanchich
+instagram_url: https://instagram.com
+linkedin_url: https://www.linkedin.com/in/andrew-banchich-a4ba1195
+pinterest_url:
+slack_url:
+twitter_url: https://twitter.com/andrewbanchich
 
 # build settings
 markdown: kramdown
-
-#configuration
-exclude : ["Gemfile", "phantom.gemspec", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
-
 
 sass:
   style: compressed

@@ -1,5 +1,5 @@
-git config user.name "$USER_NAME"
-git config user.email "$USER_EMAIL"
+git config user.name "tks18"
+git config user.email "tksudharshan@gmail.com"
 
 git checkout site
 git pull origin site

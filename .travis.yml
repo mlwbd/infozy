@@ -5,6 +5,7 @@ branches:
   - develop
 before_install:
    - rvm install 2.6.5
+cache: bundler
 install:
 - gem update --system
 - gem install jekyll -v 3.8.5
@@ -14,3 +15,14 @@ install:
 script:
   - JEKYLL_ENV=production bundle exec jekyll build
 
+deploy:
+  provider: pages
+  local-dir: ./site
+  target-branch: master
+  email: deploy@travis-ci.org
+  name: Deployment Bot
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: develop

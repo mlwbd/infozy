@@ -3,7 +3,7 @@ jobs:
   build:
     branches:
       ignore:
-        - develop
+        -  develop
   deploy:
     docker:
       - image: circleci/ruby:2.6.5-node-browsers

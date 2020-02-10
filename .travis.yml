@@ -2,7 +2,7 @@ language: ruby
 cache: bundler
 branches:
   only:
-  - master
+  - develop
 before_install:
    - rvm install 2.6.5
 install:

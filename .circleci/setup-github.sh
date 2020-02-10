@@ -8,6 +8,7 @@ find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name '.gitignore' -exec rm 
 mv _site/* .
 rm -R _site/
 
+git init
 git add -fA
 git commit -m "initial commit"
 git push origin site

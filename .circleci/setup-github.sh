@@ -1,17 +1,15 @@
-git config user.name "tks18"
-git config user.email "tksudharshan@gmail.com"
+git config user.name "$USER_NAME"
+git config user.email "$USER_EMAIL"
 
-git checkout site
+git checkout master
 git pull origin master
 
 find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
 mv _site/* .
 rm -R _site/
 
-git init
 git add -fA
-git commit -m "initial commit"
-git push origin site
+git commit --allow-empty -m "$(git log develop -1 --pretty=%B)"
+git push origin master
 
 echo "deployed successfully"
-f20fcabeb6b644cf10534da58a6c88f2876dbc8f

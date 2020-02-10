@@ -2,7 +2,7 @@ version: 2
 jobs:
   branches:
     only:
-    - develop
+      - master
   deploy:
     docker:
       - image: circleci/ruby:2.6.5-node-browsers

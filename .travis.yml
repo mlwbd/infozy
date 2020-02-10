@@ -17,7 +17,7 @@ script:
 
 deploy:
   provider: pages
-  local-dir: ./site
+  local-dir: ./_site
   target-branch: master
   email: deploy@travis-ci.org
   name: Deployment Bot

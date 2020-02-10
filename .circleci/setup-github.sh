@@ -9,7 +9,7 @@ mv _site/* .
 rm -R _site/
 
 git add -fA
-git commit --allow-empty -m "Pushing Files to Site"
+git commit -m "initial commit"
 git push origin site
 
 echo "deployed successfully"

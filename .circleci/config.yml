@@ -1,23 +1,26 @@
 version: 2
 jobs:
-  deploy:
-    docker:
-      - image: circleci/ruby:2.6.5-node-browsers
-        environment:
-          BUNDLER_VERSION: 2.1.4
-    steps:
-      - checkout
-      - run: npm install
-      - run: sudo gem update --system
-      - run: sudo gem install bundler
-      - run: bundle install
-      - run: bundle exec jekyll build
-      - deploy:
-          name: Deploy Release to GitHub
-          command: |
-            if [ $CIRCLE_BRANCH == 'develop' ]; then
-              bash .circleci/setup-github.sh
-            fi
+  branches:
+  	only:
+    	- develop
+  		deploy:
+    		docker:
+      		- image: circleci/ruby:2.6.5-node-browsers
+        	environment:
+          		BUNDLER_VERSION: 2.1.4
+    		steps:
+      		- checkout
+      		- run: npm install
+      		- run: sudo gem update --system
+      		- run: sudo gem install bundler
+      		- run: bundle install
+      		- run: bundle exec jekyll build
+      		- deploy:
+          		name: Deploy Release to GitHub
+          		command: |
+            		if [ $CIRCLE_BRANCH == 'develop' ]; then
+              		bash .circleci/setup-github.sh
+            		fi
 workflows:
   version: 2
   build:

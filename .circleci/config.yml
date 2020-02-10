@@ -22,6 +22,5 @@ workflows:
       - deploy:
           filters:
             branches:
-              ignore:
-                - master
+              only: /^develop-.*/
 

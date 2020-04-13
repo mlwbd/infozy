@@ -22,24 +22,31 @@
                 <p style="text-transform: uppercase;">{{ site.description }}</p>
             </div>
             <div class="row">
-                <div class="4u 12u$(medium)">
+                <div class="3u 12u$(medium)">
                     <center>
                         <ul class="actions">
                             <li><a href="#one" class="button next scrolly">Start Now</a></li>
                         </ul>
                     </center>
                 </div>
-                <div class="4u 12u$(medium)">
+                <div class="3u 12u$(medium)">
                     <center>
                         <ul class="actions">
                             <li><a href="#two" class="button next scrolly">Latest News</a></li>
                         </ul>
                     </center>
                 </div>
-                <div class="4u 12u$(medium)">
+                <div class="3u 12u$(medium)">
                     <center>
                         <ul class="actions">
                             <li><a href="https://about.infozy.tk" class="button next scrolly">About Authors</a></li>
+                        </ul>
+                    </center>
+                </div>
+                <div class="3u 12u$(medium)">
+                    <center>
+                        <ul class="actions">
+                            <li><a href="#contact" class="button next scrolly">Contact Us</a></li>
                         </ul>
                     </center>
                 </div>
@@ -63,14 +70,16 @@
         <section id="two">
             <div class="inner">
                 <header class="major">
-                    <h2>Latest Posts & News (Links Broken)</h2>
+                    <a href="/latest_news">
+                        <h2>Latest Posts & News</h2>
+                    </a>
                 </header>
                 <p>{{ content }}</p>
-                <ol class="custom">
-                    {% for post in site.posts %}
-                    <li><a href="landing.html">{{ post.title }}</a></li>
-                    {% endfor %}
-                </ol>
+                <script language="JavaScript" src="http://feedroll.com/rssviewer/feed2js.php?src=https%3A%2F%2Fdopetrope.tk%2Ffeed.xml&num=5&au=y&date=y&targ=y&utf=y&css=https://infozy.tk/assets/css/main.css"  charset="UTF-8" type="text/javascript"></script>
+
+                <noscript>
+                    <a href="http://feedroll.com/rssviewer/feed2js.php?src=https%3A%2F%2Fdopetrope.tk%2Ffeed.xml&num=5&au=y&date=y&targ=y&utf=y&css=https://infozy.tk/assets/css/main.css&html=y">View RSS feed</a>
+                </noscript>
             </div>
         </section>
 

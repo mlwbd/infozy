@@ -15,20 +15,25 @@
     
     <!-- Main -->
     <div id="main" class="alt">
-
       <!-- One -->
       <section id="one">
 	<div class="inner">
-          {% for post in site.posts %}
-	  {% if post.title != 404 %}
+    <p>{{ page.content }}</p>
+    {% for website in site.data.websites %}
+	  {% if website.name != 404 %}
 	  <header class="major">
-	    <h1>{{ post.title }}</h1>
+	    <h3><a href="{{ website.link }}" target="_blank">{{ website.name }}</a></h3>
 	  </header>
-	  {% if post.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ post.image }}" alt="" /></span>{% endif %}
-	  {% if post.date %}<p>{{ post.date }}</p>{% endif %}
-	  <p>{{ post.content }}</p>
+	  {% if website.image %}
+      <a href="{{ website.link }}" target="_blank"><span class="image main"><img src="{{ site.baseurl }}/{{ website.image }}" alt="{{ website.name }}" /></span></a>
+    {% endif %}
+    <p>
+      {{ website.description }}
+    </p>
+    <ul class="actions">
+      <li><a href="{{ website.link }}" target="_blank" class="button special"> Click Here </a></li>
 	  {% endif %}
-          {% endfor %}
+    {% endfor %}
 	</div>
       </section>
 

@@ -1,5 +1,12 @@
+---
+layout: post
+title: Latest News
+description: Latest News
+nav-menu: false
+---
+
 Creative Commons Attribution 3.0 Unported
-http://creativecommons.org/licenses/by/3.0/
+[Website](http://creativecommons.org/licenses/by/3.0/)
 
 License
 

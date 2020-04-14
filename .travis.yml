@@ -4,6 +4,7 @@ branches:
   only:
   - develop
 before_install:
+   - export TZ=Asia/Kolkata
    - rvm install 2.6.5
 cache: bundler
 install:

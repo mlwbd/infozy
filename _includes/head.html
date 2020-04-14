@@ -3,10 +3,12 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<!--[if lte IE 8]><script src="{{ "assets/js/ie/html5shiv.js" | relative_url }}"></script><![endif]-->
-	{% if page.url == 'https://tks18.github.io/*' %}
-		<link rel="stylesheet" href="/infozy/assets/css/main.css" />
-	{% else %}
-		<link rel="stylesheet" href="/assets/css/main.css" />
+	{% if site.url contains 'https://tks18.github.io/' %}
+		<link rel="stylesheet" type="text/css" href="/infozy/assets/css/main.css" />
+	{% elsif site.url contains 'https://tks18.gitlab.io/*' %}
+	    <link rel="stylesheet" type="text/css" href="Needless-Dagger/assets/css/main.css">
+    {% else %}
+		<link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
 	{% endif %}
 	<!--[if lte IE 9]><link rel="stylesheet" href="{{ "assets/css/ie9.css" | relative_url }}" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="{{ "assets/css/ie8.css" | relative_url }}" /><![endif]-->

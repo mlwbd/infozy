@@ -31,7 +31,7 @@
       {{ website.description }}
     </p>
     <ul class="actions">
-      <li><a href="{{ website.link }}" target="_blank" class="button special"> Click Here </a></li>
+      <li><a href="{{ website.link }}" target="_blank" class="button special"> Go to Website </a></li>
 	  {% endif %}
     {% endfor %}
 	</div>
@@ -39,6 +39,7 @@
 
     </div>
 
+    {% include newsletter.html %}
     {% include footer.html %}
 
   </body>

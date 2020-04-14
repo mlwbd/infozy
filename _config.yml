@@ -11,18 +11,19 @@ city: Chennai
 state: TN
 zip_code: 600005
 country: India
+newsletter: yes
 
 # social settings
 500px_url:
 facebook_url:
-github_url:
-gitlab_url: https://gitlab.com/u/andrewbanchich
-googleplus_url: https://plus.google.com/u/0/+AndrewBanchich
-instagram_url: https://instagram.com
-linkedin_url: https://www.linkedin.com/in/andrew-banchich-a4ba1195
+github_url: https://github.com/tks18
+gitlab_url: https://gitlab.com/tks18
+googleplus_url:
+instagram_url: https://instagram.com/shantk18
+linkedin_url: https://www.linkedin.com/in/shantk18
 pinterest_url:
 slack_url:
-twitter_url: https://twitter.com/andrewbanchich
+twitter_url: https://twitter.com/shantk18
 
 # build settings
 markdown: kramdown

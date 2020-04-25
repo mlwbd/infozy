@@ -5,7 +5,7 @@ email: tksudharshan@infozy.tk
 description: Infozy offers Students a unique environment for gathering and sharing information that will help them do their jobs with efficiency. At the core, our goal is to capture the intimate conversation between peers and colleagues when they need quick advice from a trusted, experienced source.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://infozy.tk" # the base hostname & protocol for your site
-author:
+author: Sudharshan
 street_address: 15/27, Triplicane 
 city: Chennai
 state: TN
@@ -14,14 +14,14 @@ country: India
 newsletter: yes
 
 # social settings
-500px_url:
+500px_url: https://500px.com/tks18
 facebook_url:
 github_url: https://github.com/tks18
 gitlab_url: https://gitlab.com/tks18
 googleplus_url:
 instagram_url: https://instagram.com/shantk18
 linkedin_url: https://www.linkedin.com/in/shantk18
-pinterest_url:
+pinterest_url: https://in.pinterest.com/sudharshantk/boards/
 slack_url:
 twitter_url: https://twitter.com/shantk18
 

@@ -5,43 +5,36 @@
     Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
   -->
 <html>
+{% include head.html %}
 
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %} 
-    
-    
+<body>
+    {% include header.html %}
     <!-- Main -->
     <div id="main" class="alt">
-      <!-- One -->
-      <section id="one">
-	<div class="inner">
-    <p>{{ page.content }}</p>
-    {% for website in site.data.websites %}
-	  {% if website.name != 404 %}
-	  <header class="major">
-	    <h3><a href="{{ website.link }}" target="_blank">{{ website.name }}</a></h3>
-	  </header>
-	  {% if website.image %}
-      <a href="{{ website.link }}" target="_blank"><span class="image main"><img src="{{ site.baseurl }}/{{ website.image }}" alt="{{ website.name }}" /></span></a>
-    {% endif %}
-    <p>
-      {{ website.description }}
-    </p>
-    <ul class="actions">
-      <li><a href="{{ website.link }}" target="_blank" class="button special"> Go to Website </a></li>
-	  {% endif %}
-    {% endfor %}
-	</div>
-      </section>
-
+        <!-- One -->
+        <section id="one">
+            <div class="inner">
+                <p>{{ page.content }}</p>
+                {% for website in site.data.websites %}
+                {% if website.name != 404 %}
+                <header class="major">
+                    <h3><a href="{{ website.link }}" target="_blank">{{ website.name }}</a></h3>
+                </header>
+                {% if website.image %}
+                <a href="{{ website.link }}" target="_blank"><span class="image main"><img src="{{ site.baseurl }}/{{ website.image }}" alt="{{ website.name }}" /></span></a>
+                {% endif %}
+                <p>
+                    {{ website.description }}
+                </p>
+                <ul class="actions">
+                    <li><a href="{{ website.link }}" target="_blank" class="button special"> Go to Website </a></li>
+                    {% endif %}
+                    {% endfor %}
+            </div>
+        </section>
     </div>
-
     {% include newsletter.html %}
     {% include footer.html %}
-
-  </body>
+</body>
 
 </html>

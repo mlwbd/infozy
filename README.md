@@ -1,8 +1,9 @@
+[![Travis CI](https://travis-ci.com/tks18/infozy.svg?branch=develop)](https://infozy.tk)
+
 # Infozy Info Group
 
 A Open Source Informational Website [HTML5 UP](https://html5up.net/).  
 
-![Forty Theme](assets/images/forty.jpg "Forty Theme")
 
 # How to Use
 
